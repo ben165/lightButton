@@ -11,52 +11,7 @@ Wird der Schalter im Status S3 gedrückt, wechselt der Status von S3 nach S0 (Li
 
 ## Class Diagramm
 
-
-```mermaid
-
-classDiagram
-LightState <|-- Lights
-Lights <-- Light
-ICommand <|.. LightsCommand
-
-
-	class Light {
-		-state : int
-		+Light()
-		+void setState()
-	}
-
-	class Lights {
-		-lightLeft : Light
-		-lightRight : Light
-		+Lights()
-	}
-
-	class LightState {
-		<<abstract>>
-		-state : int
-		+void stateChange()
-		+String getState()
-	}
-
-	class ICommand {
-		<<interface>>
-		+void switchChange()
-		+String getStatus()
-	}
-
-	class LightsCommand {
-		-lights : Lights
-		+LightsCommand(Lights)
-	}
-
-	class Control {
-		-command : ICommand
-		+void setCommand(ICommand)
-		+void pressButton()
-	}
-
-```
+![no text](class_diagram/class_transparent.png "class diagram")
 
 <br />
 <br />
