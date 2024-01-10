@@ -11,7 +11,7 @@ Wird der Schalter im Status S3 gedrückt, wechselt der Status von S3 nach S0 (Li
 
 ## Class Diagramm
 
-![no text](class_diagram/class_transparent.png "class diagram")
+![no text](class_diagram/class.png "class diagram")
 
 <br />
 <br />
