@@ -1,0 +1,45 @@
+---
+title: B08 Scheinwerfer Übung
+
+---
+classDiagram
+LightState <|-- Lights
+Lights <-- Light
+ICommand <|.. LightsCommand
+
+
+	class Light {
+		-state : int
+		+Light()
+		+void setState()
+	}
+
+	class Lights {
+		-lightLeft : Light
+		-lightRight : Light
+		+Lights()
+	}
+
+	class LightState {
+		<<abstract>>
+		-state : int
+		+void stateChange()
+		+String getState()
+	}
+
+	class ICommand {
+		<<interface>>
+		+void switchChange()
+		+String getStatus()
+	}
+
+	class LightsCommand {
+		-lights : Lights
+		+LightsCommand(Lights)
+	}
+
+	class Control {
+		-command : ICommand
+		+void setCommand(ICommand)
+		+void pressButton()
+	}

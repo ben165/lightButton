@@ -2,7 +2,7 @@ package light;
 
 public class LightsCommand implements ICommand{
 
-    private Lights lights;
+    private final Lights lights;
 
     public LightsCommand(Lights lights) {
         this.lights = lights;
@@ -10,12 +10,11 @@ public class LightsCommand implements ICommand{
 
     @Override
     public void switchChange() {
-        this.lights.getLight1().switchChange();
-        this.lights.getLight2().switchChange();
+        lights.stateChange();
     }
 
     @Override
     public String getStatus() {
-        return this.lights.getLight1().getStatusStr();
+        return lights.getState();
     }
 }

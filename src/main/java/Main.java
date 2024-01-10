@@ -13,6 +13,9 @@ public class Main {
         ICommand switchChange = new LightsCommand(lights);
 
         control.setCommand(switchChange);
-
+        System.out.println(lights.getState());
+        control.setCommand(switchChange);
+        control.pressButton();
+        System.out.println(lights.getState());
     }
 }

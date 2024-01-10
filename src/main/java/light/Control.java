@@ -9,7 +9,6 @@ public class Control {
     }
 
     public void pressButton() {
-        System.out.println("--- pressButton");
         command.switchChange();
     }
 }

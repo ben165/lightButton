@@ -1,18 +1,26 @@
 package light;
 
-public class Lights {
-    private final Light light1 = new Light();
-    private final Light light2 = new Light();
+public class Lights extends LightState{
+    //private int state = 0;
+    private final Light lightLeft = new Light();
+    private final Light lightRight = new Light();
 
     public Lights() {
 
     }
 
-    public Light getLight1() {
-        return light1;
+    @Override
+    public void stateChange() {
+        if (state == 3) {
+            state = 0;
+        } else {
+            state++;
+        }
+        lightLeft.setState(state);
+        lightRight.setState(state);
     }
 
-    public Light getLight2() {
-        return light2;
+    public String getState() {
+        return "S" + state;
     }
 }
