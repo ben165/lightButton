@@ -1,0 +1,34 @@
+
+Light {
+	private int status;
+
+
+	void setStatus(int status);
+	int getStatus();
+}
+
+Lights {
+	private int status;
+	Light[] lights = new Light[2]
+
+
+	Lights();
+
+	void pressButton();
+	String getStatus();
+
+}
+
+
+
+
+Interface IButton {
+	void pressButton();
+	String getStatus();
+}
+
+
+
+LightStatusName {
+	public static String getStatusName(int status);
+}

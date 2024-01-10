@@ -1,14 +1,18 @@
+import light.Control;
+import light.ICommand;
 import light.Lights;
+import light.LightsCommand;
 
 public class Main {
     public static void main(String[] args) {
 
+        Control control = new Control();
+
         var lights = new Lights();
 
-        for (int i = 0; i<=10; i++) {
-            System.out.println(lights.getStatus());
-            lights.pressButton();
-        }
+        ICommand switchChange = new LightsCommand(lights);
+
+        control.setCommand(switchChange);
 
     }
 }
