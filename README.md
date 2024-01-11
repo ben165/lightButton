@@ -11,6 +11,8 @@ Wird der Schalter im Status S3 gedrückt, wechselt der Status von S3 nach S0 (Li
 
 ## Class Diagramm
 
+Klassendiagramm wurde text-orientierte durch Mermaid erstellt (https://mermaid.js.org/). Visual Paradigm ist unter meinem Linux Rechner nicht mehr lauffähig.
+
 ![no text](class_diagram/class.png "class diagram")
 
 <br />

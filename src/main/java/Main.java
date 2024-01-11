@@ -1,13 +1,12 @@
-import light.Control;
-import light.ICommand;
-import light.Lights;
-import light.LightsCommand;
+import b20.Control;
+import b20.ICommand;
+import b20.Lights;
+import b20.LightsCommand;
 
 public class Main {
     public static void main(String[] args) {
 
-        Control control = new Control();
-
+        var control = new Control();
         var lights = new Lights();
 
         ICommand switchChange = new LightsCommand(lights);

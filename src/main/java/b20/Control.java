@@ -1,4 +1,4 @@
-package light;
+package b20;
 
 public class Control {
 

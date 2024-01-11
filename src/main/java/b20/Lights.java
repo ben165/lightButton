@@ -1,4 +1,4 @@
-package light;
+package b20;
 
 public class Lights extends LightState{
     //private int state = 0;
