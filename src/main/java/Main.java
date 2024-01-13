@@ -1,9 +1,7 @@
-import b20.Control;
-import b20.ICommand;
-import b20.Lights;
-import b20.LightsCommand;
+import B08.*;
 
 public class Main {
+/*
     public static void main(String[] args) {
 
         var control = new Control();
@@ -16,5 +14,31 @@ public class Main {
         control.setCommand(switchChange);
         control.pressButton();
         System.out.println(lights.getState());
+    }
+ */
+    public static void main(String[] args) {
+        Lights lights = new Lights();
+        lights.setState(new State0());
+
+        ICommand lightsChange = new LightChangeCmd(lights);
+        System.out.println(lights.toString());
+        lightsChange.execute();
+        System.out.println(lights.toString());
+        lights.switchChange();
+        System.out.println(lights.toString());
+        lights.switchChange();
+        System.out.println(lights.toString());
+        lights.switchChange();
+        System.out.println(lights.toString());
+        lights.switchChange();
+        System.out.println(lights.toString());
+        lights.switchChange();
+        System.out.println(lights.toString());
+
+
+
+
+
+
     }
 }

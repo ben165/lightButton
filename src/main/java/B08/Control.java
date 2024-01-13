@@ -1,4 +1,4 @@
-package b20;
+package B08;
 
 public class Control {
 
@@ -9,7 +9,7 @@ public class Control {
     }
 
     public void pressButton() {
-        command.switchChange();
+        command.execute();
     }
 }
 
